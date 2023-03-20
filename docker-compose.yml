@@ -1,0 +1,31 @@
+version: '3.7'
+
+services:
+
+#  nodejs:
+#    build: .
+##    image: node:latest
+##    volumes:
+##      - ./gate-simulator:/app
+#    ports:
+#      - "9999:9999"
+##    command: npm start
+
+  mysql:
+    image: mysql:8.0
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_DATABASE=app
+      - MYSQL_USER=app
+      - MYSQL_PASSWORD=pass
+      - MYSQL_RANDOM_ROOT_PASSWORD=yes
+
+#  java-app:
+#    depends_on:
+#      - mysql
+#    image: openjdk:8-slim
+#    build:
+#      dockerfile: DockerfileJava
+#    ports:
+#      - '8080:8080'
