@@ -1,3 +1,5 @@
+package tests;
+
 import info.DataHelper;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;

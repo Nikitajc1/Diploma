@@ -1,3 +1,5 @@
+package tests;
+
 import info.DataHelper;
 import info.DatabaseProcess;
 import org.junit.jupiter.api.AfterAll;
