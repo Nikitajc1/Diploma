@@ -11,6 +11,9 @@ build: off  # будем использовать свой скрипт сбор
 install:
   # запускаем SUT (& означает, что в фоновом режиме не блокируем терминал для запуска тестов)
   - docker version
+  - docker pull node:latest
+  - docker pull mysql:latest
+  - docker pull postgresql:latest
   - docker-compose build
   - docker-compose up
   - java -jar ./artifacts/aqa-shop.jar &
