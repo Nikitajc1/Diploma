@@ -11,7 +11,7 @@ build: off  # будем использовать свой скрипт сбор
 install:
   # запускаем SUT (& означает, что в фоновом режиме не блокируем терминал для запуска тестов)
   - docker version
-  - docker pull mcr.microsoft.com/windows/nanoserver:1803-amd64
+  - docker-compose build
   - docker-compose up
   - java -jar ./artifacts/aqa-shop.jar &
 
