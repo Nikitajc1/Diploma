@@ -2,14 +2,10 @@ version: '3.7'
 
 services:
 
-#  nodejs:
-#    build: .
-##    image: node:latest
-##    volumes:
-##      - ./gate-simulator:/app
-#    ports:
-#      - "9999:9999"
-##    command: npm start
+  nodejs:
+    build: .
+    ports:
+      - "9999:9999"
 
   mysql:
     image: mysql:8.0
@@ -21,11 +17,11 @@ services:
       - MYSQL_PASSWORD=pass
       - MYSQL_RANDOM_ROOT_PASSWORD=yes
 
-#  java-app:
-#    depends_on:
-#      - mysql
-#    image: openjdk:8-slim
-#    build:
-#      dockerfile: DockerfileJava
+#  postgresql:
+#    image: postgres:latest
 #    ports:
-#      - '8080:8080'
+#      - "5432:5432"
+#    environment:
+#      - POSTGRES_DB=app
+#      - POSTGRES_USER=PUBLIC
+#      - POSTGRES_PASSWORD=pass

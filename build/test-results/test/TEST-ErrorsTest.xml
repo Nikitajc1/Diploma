@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ErrorsTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2023-03-23T18:01:38" hostname="DESKTOP-68SVGNT" time="8.624">
+  <properties/>
+  <testcase name="checkErrorWrongMonthNumberField()" classname="ErrorsTest" time="3.155"/>
+  <testcase name="checkErrorEmptyMonthField()" classname="ErrorsTest" time="0.973"/>
+  <testcase name="checkErrorWrongYearField()" classname="ErrorsTest" time="0.999"/>
+  <testcase name="checkErrorEmptyPinField()" classname="ErrorsTest" time="0.878"/>
+  <testcase name="checkErrorEmptyYearField()" classname="ErrorsTest" time="0.879"/>
+  <testcase name="checkErrorEmptyNumberField()" classname="ErrorsTest" time="0.868"/>
+  <testcase name="checkErrorEmptyHolderField()" classname="ErrorsTest" time="0.868"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+Starting ChromeDriver 111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995}) on port 9263
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+мар. 23, 2023 9:01:39 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+</testsuite>

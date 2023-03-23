@@ -1,5 +1,0 @@
-FROM openjdk:8-slim
-WORKDIR /Diploma/artifacts
-COPY artifacts/aqa-shop*.jar ./
-ENTRYPOINT ["java", "-jar", "aqa-shop.jar"]
-EXPOSE 8080
