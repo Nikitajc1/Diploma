@@ -12,7 +12,9 @@ install:
   # запускаем SUT (& означает, что в фоновом режиме не блокируем терминал для запуска тестов)
   - docker version
   - choco install docker-compose
-  - ./DockerCli.exe -SwitchDaemon
+  - $FILE = "C:\ProgramData\Docker\config\daemon.json"
+  - (Get-Content -Path $FILE) -replace '"experimental": false','"experimental": true' | Set-Content -Path $FILE
+  - PS C:\WINDOWS\system32> Restart-Service docker
   - docker-compose build
   - docker-compose up
   - java -jar ./artifacts/aqa-shop.jar &
