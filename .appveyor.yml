@@ -11,7 +11,7 @@ build: off  # будем использовать свой скрипт сбор
 install:
   # запускаем SUT (& означает, что в фоновом режиме не блокируем терминал для запуска тестов)
   - docker version
-  - dockerd.exe --experimental
+  - DockerCli.exe -SwitchDaemon
   - choco install docker-compose
   - docker swarm init
   - docker-compose up
