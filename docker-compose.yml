@@ -17,6 +17,10 @@ services:
       - MYSQL_PASSWORD=pass
       - MYSQL_RANDOM_ROOT_PASSWORD=yes
 
+networks:
+  default:
+    external:
+      name: nat
 #  postgresql:
 #    image: postgres:latest
 #    ports:
