@@ -12,7 +12,7 @@ install:
   # запускаем SUT (& означает, что в фоновом режиме не блокируем терминал для запуска тестов)
   - docker version
   - cd\
-  - dir DockerCli.exe
+  - dir DockerCli.exe /s
   - docker-compose up
   - java -jar ./artifacts/aqa-shop.jar &
 
