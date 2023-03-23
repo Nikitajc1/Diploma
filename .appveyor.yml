@@ -13,7 +13,7 @@ install:
   - docker version
   - choco install docker-compose
   - $FILE = "C:\ProgramData\Docker\config\daemon.json"
-  - (Get-Content -Path $FILE) -replace '"experimental": false','"experimental": true' | Set-Content -Path $FILE
+  - (Get-Content -Path $FILE) -replace '"experimental":false','"experimental":true' | Set-Content -Path $FILE
   - PS C:\WINDOWS\system32> Restart-Service docker
   - docker-compose build
   - docker-compose up
