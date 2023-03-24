@@ -19,6 +19,7 @@ services:
 
 networks:
   default:
+    driver: bridge
 
 #  postgresql:
 #    image: postgres:latest
