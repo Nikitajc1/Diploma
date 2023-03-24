@@ -18,7 +18,7 @@ install:
   - cd gate-simulator
 #  - npm install
 #  - npm start &
-  - mysql -V
+  - mysql.exe -V
   - java -jar ./artifacts/aqa-shop.jar &
 
 build_script:
