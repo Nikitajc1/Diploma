@@ -11,7 +11,7 @@ build: off  # будем использовать свой скрипт сбор
 install:
   # запускаем SUT (& означает, что в фоновом режиме не блокируем терминал для запуска тестов)
   - docker version
-  - docker pull node:5.10
+  - docker pull node:slim
   - docker pull mysql:slim
   - choco install docker-compose
   - docker-compose up
