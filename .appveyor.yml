@@ -15,7 +15,7 @@ install:
   # запускаем SUT (& означает, что в фоновом режиме не блокируем терминал для запуска тестов)
   - cd gate-simulator
   - npm install
-  - nohup npm start &
+  - npm start &
   - mysql -V
   - java -jar ./artifacts/aqa-shop.jar &
 
