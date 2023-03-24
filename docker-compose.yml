@@ -19,7 +19,8 @@ services:
 
 networks:
   default:
-    driver: bridge
+    external:
+      name: nat
 
 #  postgresql:
 #    image: postgres:latest
