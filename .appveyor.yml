@@ -16,7 +16,7 @@ install:
   - cd gate-simulator
 #  - npm install
 #  - npm start &
-  - winget install Oracle.MySQL
+  - postgres -V
   - java -jar ./artifacts/aqa-shop.jar &
 
 build_script:
