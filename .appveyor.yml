@@ -1,4 +1,9 @@
+version: 1.0.{build}
 image: Visual Studio 2017  # образ для сборки
+platform:
+  # будем гонять CI на amd64 и x86...
+  - x64
+  - x86
 
 stack: jdk 11  # версия JDK
 
@@ -11,11 +16,6 @@ build: off  # будем использовать свой скрипт сбор
 install:
   # запускаем SUT (& означает, что в фоновом режиме не блокируем терминал для запуска тестов)
   - docker version
-  - cd "C:\Program Files\Docker\Docker"
-  - DockerCli.exe -SwitchDaemon
-  - docker pull node:slim
-  - docker pull mysql:slim
-  - choco install docker-compose
   - docker-compose up
   - java -jar ./artifacts/aqa-shop.jar &
 
