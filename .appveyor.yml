@@ -14,7 +14,6 @@ build: off  # будем использовать свой скрипт сбор
 install:
   # запускаем SUT (& означает, что в фоновом режиме не блокируем терминал для запуска тестов)
   - docker version
-  - docker network create --driver nat network-name
   - choco install docker-compose
   - docker-compose up
   - java -jar ./artifacts/aqa-shop.jar &
