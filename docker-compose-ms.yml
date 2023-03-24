@@ -21,12 +21,3 @@ networks:
   default:
     external:
       name: nat
-
-#  postgresql:
-#    image: postgres:latest
-#    ports:
-#      - "5432:5432"
-#    environment:
-#      - POSTGRES_DB=app
-#      - POSTGRES_USER=PUBLIC
-#      - POSTGRES_PASSWORD=pass

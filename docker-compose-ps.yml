@@ -1,0 +1,19 @@
+version: '3.3'
+
+services:
+
+  nodejs:
+    build: .
+    ports:
+      - "9999:9999"
+
+  postgresql:
+    image: postgres:latest
+    volumes:
+      - ./pgdata:/var/lib/postgresql/pgdata
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=pass
+      - POSTGRES_USER=app
+      - POSTGRES_DB=app

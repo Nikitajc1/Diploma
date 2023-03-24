@@ -31,8 +31,13 @@ dependencies {
 
     testImplementation 'mysql:mysql-connector-java:8.0.18'
     implementation 'org.postgresql:postgresql:42.6.0'
+    testImplementation 'postgresql:postgresql:9.0-801.jdbc4'
+
+    implementation 'com.microsoft.sqlserver:mssql-jdbc:12.2.0.jre11'
 }
 
 test {
     useJUnitPlatform()
+    systemProperty 'selenide.headless', System.getProperty('selenide.headless')
+    systemProperty 'test.db.url', System.getProperty('test.db.url')
 }

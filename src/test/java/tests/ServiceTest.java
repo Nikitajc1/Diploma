@@ -17,14 +17,14 @@ public class ServiceTest {
         main = open("http://localhost:8080/", MainPage.class);
     }
 
-    @AfterAll
-    static void clear() {
-        try {
-            DatabaseProcess.clean();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-    }
+//    @AfterAll
+//    static void clear() {
+//        try {
+//            DatabaseProcess.clean();
+//        } catch (SQLException e) {
+//            throw new RuntimeException(e);
+//        }
+//    }
 
     @Test
     void approvedBuy() {

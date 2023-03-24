@@ -13,9 +13,7 @@ build: off  # будем использовать свой скрипт сбор
 
 install:
   # запускаем SUT (& означает, что в фоновом режиме не блокируем терминал для запуска тестов)
-  - docker version
-  - choco install docker-compose
-  - docker-compose up
+  - npm start
   - java -jar ./artifacts/aqa-shop.jar &
 
 build_script:
