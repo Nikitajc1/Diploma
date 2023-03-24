@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:slim
 WORKDIR /Diploma/gate-simulator
 COPY gate-simulator/package*.json ./
 COPY gate-simulator/app*.js ./

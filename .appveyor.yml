@@ -11,10 +11,9 @@ build: off  # будем использовать свой скрипт сбор
 install:
   # запускаем SUT (& означает, что в фоновом режиме не блокируем терминал для запуска тестов)
   - docker version
-  - sudo bash -c 'echo "{\"experimental\" as true}" > /etc/docker/daemon.json'
-  - sudo systemctl restart docker
+  - docker pull node:6.2.1-slim
+  - docker pull mysql:5.7.11
   - choco install docker-compose
-  - docker swarm init
   - docker-compose up
   - java -jar ./artifacts/aqa-shop.jar &
 
