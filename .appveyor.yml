@@ -11,7 +11,7 @@ build: off  # будем использовать свой скрипт сбор
 install:
   # запускаем SUT (& означает, что в фоновом режиме не блокируем терминал для запуска тестов)
   - docker version
-  - & $Env:ProgramFiles\Docker\Docker\DockerCli.exe -SwitchDaemon .
+  - $Env:ProgramFiles\Docker\Docker\DockerCli.exe -SwitchDaemon .
   - docker pull node:slim
   - docker pull mysql:slim
   - choco install docker-compose
