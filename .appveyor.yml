@@ -2,6 +2,7 @@ image: Visual Studio 2017  # образ для сборки
 
 services:
   - mysql
+  - postgresql
 
 stack: jdk 11  # версия JDK
 
@@ -16,7 +17,7 @@ install:
   - cd gate-simulator
 #  - npm install
 #  - npm start &
-  - $cmd = ' mysql.exe -V '
+  - $iniPath="C:\ProgramData\MySQL\MySQL Server 5.7\my.ini"
   - java -jar ./artifacts/aqa-shop.jar &
 
 build_script:
