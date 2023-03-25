@@ -13,9 +13,9 @@ build: off  # будем использовать свой скрипт сбор
 
 install:
   # запускаем SUT (& означает, что в фоновом режиме не блокируем терминал для запуска тестов)
-  - curl -SL https://github.com/docker/compose/releases/download/v2.17.0/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
-  - sudo chmod +x /usr/local/bin/docker-compose
-  - sudo docker-compose up -d
+  - ps: curl -SL https://github.com/docker/compose/releases/download/v2.17.0/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
+  - ps: sudo chmod +x /usr/local/bin/docker-compose
+  - ps: sudo docker-compose up -d
   - sleep 10
   - java -jar ./artifacts/aqa-shop.jar &
 
