@@ -1,4 +1,4 @@
-image: Visual Studio 2017  # образ для сборки
+image: Visual Studio 2019  # образ для сборки
 
 services:
   - mysql
@@ -17,7 +17,7 @@ install:
   - cd gate-simulator
 #  - npm install
 #  - npm start &
-  - $iniPath="C:\ProgramData\MySQL\MySQL Server 5.7\my.ini"
+  - mysql -V
   - java -jar ./artifacts/aqa-shop.jar &
 
 build_script:
