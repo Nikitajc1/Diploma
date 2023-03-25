@@ -1,8 +1,7 @@
-image: Visual Studio 2019  # образ для сборки
+image: Ubuntu  # образ для сборки
 
 services:
-  - mysql
-  - postgresql
+  - docker
 
 stack: jdk 11  # версия JDK
 
@@ -14,12 +13,13 @@ build: off  # будем использовать свой скрипт сбор
 
 install:
   # запускаем SUT (& означает, что в фоновом режиме не блокируем терминал для запуска тестов)
-#  - cd gate-simulator
-#  - npm install
-#  - npm start &
-  - dir C:\
+  - ps: sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+  - ps: sudo chmod +x /usr/local/bin/docker-compose
+  - ps: sudo docker-compose up -d
+  - sleep 10
   - java -jar ./artifacts/aqa-shop.jar &
 
 build_script:
-  - chmod +x gradlew
+  - sleep 10
+  - sudo chmod +x gradlew
   - ./gradlew test -Dselenide.headless=true --info
