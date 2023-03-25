@@ -1,0 +1,1 @@
+{"uuid":"184ea451-687f-4c5a-b173-4e997b0ca860","name":"checkErrorWrongYearField()","children":["3058155c-945d-4eff-96d2-744aa317fb1b"],"befores":[{"name":"openChrome","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1679747412787,"stop":1679747412832}],"afters":[],"start":1679747412784,"stop":1679747413786}

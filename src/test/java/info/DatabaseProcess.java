@@ -1,16 +1,9 @@
 package info;
 
-import com.microsoft.sqlserver.jdbc.ISQLServerDataSource;
-import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
-import com.microsoft.sqlserver.jdbc.SQLServerException;
-import com.mysql.jdbc.Driver;
-import lombok.SneakyThrows;
+
 import lombok.experimental.UtilityClass;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.ScalarHandler;
-import org.postgresql.util.DriverInfo;
-
-import javax.sql.DataSource;
 import java.sql.*;
 
 @UtilityClass

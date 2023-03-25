@@ -4,9 +4,7 @@ import info.DataHelper;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
-
 import java.time.Duration;
-
 import static com.codeborne.selenide.Selenide.*;
 
 public class MainPage {

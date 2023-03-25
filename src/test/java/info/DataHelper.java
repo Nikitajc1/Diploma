@@ -1,11 +1,14 @@
 package info;
 
+import com.github.javafaker.Faker;
 import lombok.Value;
+import java.util.Calendar;
+import java.util.Random;
 
 public class DataHelper {
+
     private DataHelper() {
     }
-
     @Value
     public static class CardNumber {
         String number;
@@ -32,7 +35,33 @@ public class DataHelper {
     }
 
     public static CardInfo card() {
-        return new CardInfo("12", "27", "PAPANISTER VITALYA", "999");
+        return new CardInfo(generatedMonth(), generatedYear(), generatedHolder(), generatedPin());
     }
 
+    private static String generatedMonth() {
+        Random random = new Random();
+        String num;
+        int number = random.nextInt(12);
+        if (number < 10) {
+            num = String.valueOf(number);
+            num = new StringBuilder(num).insert(0, "0").toString();
+            return num;
+        } else return String.valueOf(number);
+    }
+
+    private static String generatedYear() {
+        int y = Calendar.getInstance().get(Calendar.YEAR) - 1999;
+        return Integer.toString(y);
+    }
+
+    private static String generatedHolder() {
+        Faker faker = new Faker();
+        return faker.name().firstName();
+    }
+
+    private static String generatedPin() {
+        Faker faker = new Faker();
+        int num = faker.number().numberBetween(101, 999);
+        return Integer.toString(num);
+    }
 }

@@ -1,12 +1,11 @@
 package tests;
 
+import com.codeborne.selenide.logevents.SelenideLogger;
 import info.DataHelper;
 import info.DatabaseProcess;
-import org.junit.jupiter.api.AfterAll;
+import io.qameta.allure.selenide.AllureSelenide;
+import org.junit.jupiter.api.*;
 import pageObject.MainPage;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 import java.sql.SQLException;
 import static com.codeborne.selenide.Selenide.open;
 
@@ -17,14 +16,23 @@ public class ServiceTest {
         main = open("http://localhost:8080/", MainPage.class);
     }
 
-//    @AfterAll
-//    static void clear() {
-//        try {
-//            DatabaseProcess.clean();
-//        } catch (SQLException e) {
-//            throw new RuntimeException(e);
-//        }
-//    }
+    @AfterEach
+    void clear() {
+        try {
+            DatabaseProcess.clean();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    @AfterAll
+    static void tearDownAll() {
+        SelenideLogger.removeListener("allure");
+    }
+    @BeforeAll
+    static void setUpAll() {
+        SelenideLogger.addListener("allure", new AllureSelenide());
+    }
+
 
     @Test
     void approvedBuy() {

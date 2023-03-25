@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tests.ErrorsTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2023-03-25T12:30:07" hostname="DESKTOP-68SVGNT" time="9.75">
+  <properties/>
+  <testcase name="checkErrorWrongMonthNumberField()" classname="tests.ErrorsTest" time="4.108"/>
+  <testcase name="checkErrorEmptyMonthField()" classname="tests.ErrorsTest" time="0.951"/>
+  <testcase name="checkErrorWrongYearField()" classname="tests.ErrorsTest" time="1.003"/>
+  <testcase name="checkErrorEmptyPinField()" classname="tests.ErrorsTest" time="0.955"/>
+  <testcase name="checkErrorEmptyYearField()" classname="tests.ErrorsTest" time="0.929"/>
+  <testcase name="checkErrorEmptyNumberField()" classname="tests.ErrorsTest" time="0.854"/>
+  <testcase name="checkErrorEmptyHolderField()" classname="tests.ErrorsTest" time="0.934"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Starting ChromeDriver 111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995}) on port 6047
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+мар. 25, 2023 3:30:09 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+</testsuite>

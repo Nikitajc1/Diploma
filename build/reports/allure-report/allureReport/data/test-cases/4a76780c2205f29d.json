@@ -1,0 +1,79 @@
+{
+  "uid" : "4a76780c2205f29d",
+  "name" : "checkErrorEmptyNumberField()",
+  "fullName" : "tests.ErrorsTest.checkErrorEmptyNumberField",
+  "historyId" : "7172be694336ba8687e72825e2027cac",
+  "time" : {
+    "start" : 1679747415679,
+    "stop" : 1679747416527,
+    "duration" : 848
+  },
+  "description" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ {
+    "name" : "openChrome",
+    "time" : {
+      "start" : 1679747415680,
+      "stop" : 1679747415716,
+      "duration" : 36
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "junit.platform.uniqueid",
+    "value" : "[engine:junit-jupiter]/[class:tests.ErrorsTest]/[method:checkErrorEmptyNumberField()]"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-68SVGNT"
+  }, {
+    "name" : "thread",
+    "value" : "15876@DESKTOP-68SVGNT.Test worker(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit-platform"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "package",
+    "value" : "tests.ErrorsTest"
+  }, {
+    "name" : "testClass",
+    "value" : "tests.ErrorsTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "checkErrorEmptyNumberField"
+  }, {
+    "name" : "suite",
+    "value" : "tests.ErrorsTest"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "4a76780c2205f29d.json",
+  "parameterValues" : [ ]
+}
