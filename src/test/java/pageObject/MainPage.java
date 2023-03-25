@@ -33,34 +33,13 @@ public class MainPage {
         credit.click();
     }
 
-    public void fieldInfo(String card) {
-        var correctData = DataHelper.card();
+    public void fieldInfo(String card, String month, String year, String holder, String pin) {
 
         informationFieldInput.get(0).setValue(card);
-        informationFieldInput.get(1).setValue(String.valueOf((correctData.getMonth())));
-        informationFieldInput.get(2).setValue(String.valueOf((correctData.getYear())));
-        informationFieldInput.get(3).setValue(String.valueOf((correctData.getHolder())));
-        informationFieldInput.get(4).setValue(String.valueOf((correctData.getPin())));
-    }
-
-    public void numberField(String value) {
-        informationFieldInput.get(0).setValue(value);
-    }
-
-    public void monthField(String value) {
-        informationFieldInput.get(1).setValue(value);
-    }
-
-    public void yearField(String value) {
-        informationFieldInput.get(2).setValue(value);
-    }
-
-    public void holderField(String value) {
-        informationFieldInput.get(3).setValue(value);
-    }
-
-    public void pinField(String value) {
-        informationFieldInput.get(4).setValue(value);
+        informationFieldInput.get(1).setValue(month);
+        informationFieldInput.get(2).setValue(year);
+        informationFieldInput.get(3).setValue(holder);
+        informationFieldInput.get(4).setValue(pin);
     }
 
     public void clickContinue() {

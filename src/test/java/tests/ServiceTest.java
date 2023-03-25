@@ -36,10 +36,16 @@ public class ServiceTest {
 
     @Test
     void approvedBuy() {
+        var data = DataHelper.card();
+
         main.visibleHeadline();
         main.visiblePicture();
         main.buyingProcess();
-        main.fieldInfo(DataHelper.approved().getNumber());
+        main.fieldInfo(DataHelper.approved().getNumber(),
+                data.getMonth(),
+                data.getYear(),
+                data.getHolder(),
+                data.getPin());
         main.clickContinue();
         main.successCheck();
 
@@ -53,10 +59,16 @@ public class ServiceTest {
 
     @Test
     void declinedBuy() {
+        var data = DataHelper.card();
+
         main.visibleHeadline();
         main.visiblePicture();
         main.buyingProcess();
-        main.fieldInfo(DataHelper.declined().getNumber());
+        main.fieldInfo(DataHelper.approved().getNumber(),
+                data.getMonth(),
+                data.getYear(),
+                data.getHolder(),
+                data.getPin());
         main.clickContinue();
         main.successCheck();
 
@@ -70,10 +82,16 @@ public class ServiceTest {
 
     @Test
     void approvedCredit() {
+        var data = DataHelper.card();
+
         main.visibleHeadline();
         main.visiblePicture();
         main.creditProcess();
-        main.fieldInfo(DataHelper.approved().getNumber());
+        main.fieldInfo(DataHelper.approved().getNumber(),
+                data.getMonth(),
+                data.getYear(),
+                data.getHolder(),
+                data.getPin());
         main.clickContinue();
         main.successCheck();
 
@@ -87,10 +105,16 @@ public class ServiceTest {
 
     @Test
     void declinedCredit() {
+        var data = DataHelper.card();
+
         main.visibleHeadline();
         main.visiblePicture();
         main.creditProcess();
-        main.fieldInfo(DataHelper.declined().getNumber());
+        main.fieldInfo(DataHelper.approved().getNumber(),
+                data.getMonth(),
+                data.getYear(),
+                data.getHolder(),
+                data.getPin());
         main.clickContinue();
         main.successCheck();
 
@@ -104,10 +128,16 @@ public class ServiceTest {
 
     @Test
     void abortOperation() {
+        var data = DataHelper.card();
+
         main.visibleHeadline();
         main.visiblePicture();
         main.buyingProcess();
-        main.fieldInfo(DataHelper.random().getNumber());
+        main.fieldInfo(DataHelper.approved().getNumber(),
+                data.getMonth(),
+                data.getYear(),
+                data.getHolder(),
+                data.getPin());
         main.clickContinue();
         main.failCheck();
     }

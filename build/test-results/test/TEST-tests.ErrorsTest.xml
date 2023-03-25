@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testsuite name="tests.ErrorsTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-03-25T12:46:55" hostname="DESKTOP-68SVGNT" time="0.122">
   <properties/>
   <testcase name="checkErrorEmptyNumberField()" classname="tests.ErrorsTest" time="0.122">
@@ -96,4 +97,23 @@
   </testcase>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
+=======
+<testsuite name="tests.ErrorsTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2023-03-25T12:55:11" hostname="DESKTOP-68SVGNT" time="9.802">
+  <properties/>
+  <testcase name="checkErrorWrongMonthNumberField()" classname="tests.ErrorsTest" time="4.227"/>
+  <testcase name="checkErrorEmptyMonthField()" classname="tests.ErrorsTest" time="0.916"/>
+  <testcase name="checkErrorWrongYearField()" classname="tests.ErrorsTest" time="1.007"/>
+  <testcase name="checkErrorEmptyPinField()" classname="tests.ErrorsTest" time="0.94"/>
+  <testcase name="checkErrorEmptyYearField()" classname="tests.ErrorsTest" time="0.952"/>
+  <testcase name="checkErrorEmptyNumberField()" classname="tests.ErrorsTest" time="0.836"/>
+  <testcase name="checkErrorEmptyHolderField()" classname="tests.ErrorsTest" time="0.909"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Starting ChromeDriver 111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995}) on port 23085
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+мар. 25, 2023 3:55:13 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+>>>>>>> 291919c (Experimental)
 </testsuite>

@@ -23,11 +23,11 @@ public class ErrorsTest {
         main.visibleHeadline();
         main.buyingProcess();
 
-        main.numberField(null);
-        main.monthField(data.getMonth());
-        main.yearField(data.getYear());
-        main.holderField(data.getHolder());
-        main.pinField(data.getPin());
+        main.fieldInfo(null,
+                data.getMonth(),
+                data.getYear(),
+                data.getHolder(),
+                data.getPin());
 
         main.clickContinue();
 
@@ -45,11 +45,11 @@ public class ErrorsTest {
         main.visibleHeadline();
         main.buyingProcess();
 
-        main.numberField(DataHelper.approved().getNumber());
-        main.monthField(null);
-        main.yearField(data.getYear());
-        main.holderField(data.getHolder());
-        main.pinField(data.getPin());
+        main.fieldInfo(DataHelper.approved().getNumber(),
+                null,
+                data.getYear(),
+                data.getHolder(),
+                data.getPin());
 
         main.clickContinue();
 
@@ -67,11 +67,11 @@ public class ErrorsTest {
         main.visibleHeadline();
         main.buyingProcess();
 
-        main.numberField(DataHelper.approved().getNumber());
-        main.monthField("22");
-        main.yearField(data.getYear());
-        main.holderField(data.getHolder());
-        main.pinField(data.getPin());
+        main.fieldInfo(DataHelper.approved().getNumber(),
+                "22",
+                data.getYear(),
+                data.getHolder(),
+                data.getPin());
 
         main.clickContinue();
 
@@ -89,11 +89,11 @@ public class ErrorsTest {
         main.visibleHeadline();
         main.buyingProcess();
 
-        main.numberField(DataHelper.approved().getNumber());
-        main.monthField(data.getMonth());
-        main.yearField(null);
-        main.holderField(data.getHolder());
-        main.pinField(data.getPin());
+        main.fieldInfo(DataHelper.approved().getNumber(),
+                data.getMonth(),
+                null,
+                data.getHolder(),
+                data.getPin());
 
         main.clickContinue();
 
@@ -111,11 +111,11 @@ public class ErrorsTest {
         main.visibleHeadline();
         main.buyingProcess();
 
-        main.numberField(DataHelper.approved().getNumber());
-        main.monthField(data.getMonth());
-        main.yearField("10");
-        main.holderField(data.getHolder());
-        main.pinField(data.getPin());
+        main.fieldInfo(DataHelper.approved().getNumber(),
+                data.getMonth(),
+                "10",
+                data.getHolder(),
+                data.getPin());
 
         main.clickContinue();
 
@@ -133,11 +133,11 @@ public class ErrorsTest {
         main.visibleHeadline();
         main.buyingProcess();
 
-        main.numberField(DataHelper.approved().getNumber());
-        main.monthField(data.getMonth());
-        main.yearField(data.getYear());
-        main.holderField(null);
-        main.pinField(data.getPin());
+        main.fieldInfo(DataHelper.approved().getNumber(),
+                data.getMonth(),
+                data.getYear(),
+                null,
+                data.getPin());
 
         main.clickContinue();
 
@@ -155,11 +155,11 @@ public class ErrorsTest {
         main.visibleHeadline();
         main.buyingProcess();
 
-        main.numberField(DataHelper.approved().getNumber());
-        main.monthField(data.getMonth());
-        main.yearField(data.getYear());
-        main.holderField(data.getHolder());
-        main.pinField(null);
+        main.fieldInfo(DataHelper.approved().getNumber(),
+                data.getMonth(),
+                data.getYear(),
+                data.getHolder(),
+                null);
 
         main.clickContinue();
 
