@@ -1,7 +1,5 @@
-version: 1.0.{build}
 image: Visual Studio 2017  # образ для сборки
-platform:
-  - x64
+
 services:
   - mysql
 
