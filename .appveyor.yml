@@ -14,10 +14,10 @@ build: off  # будем использовать свой скрипт сбор
 
 install:
   # запускаем SUT (& означает, что в фоновом режиме не блокируем терминал для запуска тестов)
-  - cd gate-simulator
+#  - cd gate-simulator
 #  - npm install
 #  - npm start &
-  - dir C:\Program Files
+  - dir C:\
   - java -jar ./artifacts/aqa-shop.jar &
 
 build_script:
