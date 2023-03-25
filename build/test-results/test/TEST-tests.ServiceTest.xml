@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tests.ServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-03-25T13:10:48" hostname="DESKTOP-68SVGNT" time="7.505">
+  <properties/>
+  <testcase name="abortOperation()" classname="tests.ServiceTest" time="7.505"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Starting ChromeDriver 111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995}) on port 7850
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+мар. 25, 2023 4:10:50 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+</testsuite>

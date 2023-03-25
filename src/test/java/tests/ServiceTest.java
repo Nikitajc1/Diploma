@@ -64,7 +64,7 @@ public class ServiceTest {
         main.visibleHeadline();
         main.visiblePicture();
         main.buyingProcess();
-        main.fieldInfo(DataHelper.approved().getNumber(),
+        main.fieldInfo(DataHelper.declined().getNumber(),
                 data.getMonth(),
                 data.getYear(),
                 data.getHolder(),
@@ -110,7 +110,7 @@ public class ServiceTest {
         main.visibleHeadline();
         main.visiblePicture();
         main.creditProcess();
-        main.fieldInfo(DataHelper.approved().getNumber(),
+        main.fieldInfo(DataHelper.declined().getNumber(),
                 data.getMonth(),
                 data.getYear(),
                 data.getHolder(),
@@ -133,7 +133,7 @@ public class ServiceTest {
         main.visibleHeadline();
         main.visiblePicture();
         main.buyingProcess();
-        main.fieldInfo(DataHelper.approved().getNumber(),
+        main.fieldInfo(DataHelper.random().getNumber(),
                 data.getMonth(),
                 data.getYear(),
                 data.getHolder(),
