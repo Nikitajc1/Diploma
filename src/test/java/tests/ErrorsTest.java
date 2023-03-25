@@ -5,6 +5,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import pageObject.MainPage;
+import pageObject.MainPageErrors;
+
 import static com.codeborne.selenide.Selenide.open;
 
 public class ErrorsTest {
