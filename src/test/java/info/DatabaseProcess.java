@@ -18,7 +18,8 @@ public class DatabaseProcess{
     private static QueryRunner runner = new QueryRunner();
 
     private static Connection getConn() throws SQLException {
-        return DriverManager.getConnection(getUrl(), user, pass);
+        String prop = System.getProperty("db.url");
+        return DriverManager.getConnection(prop, user, pass);
     }
 
     public static String buyingStatus() {
@@ -48,22 +49,5 @@ public class DatabaseProcess{
         runner.execute(connection, "DELETE FROM credit_request_entity");
         runner.execute(connection, "DELETE FROM order_entity");
         runner.execute(connection, "DELETE FROM payment_entity");
-    }
-
-
-    private static String getUrl() {
-//        SQLServerDataSource dataSource = new SQLServerDataSource();
-//        dataSource.setUser("app");
-//        dataSource.setPassword("pass");
-//        dataSource.setServerName("localhost");
-//        dataSource.setDatabaseName("app");
-//        try {
-//            var c = dataSource.getConnection();
-//        } catch (SQLServerException e) {
-//            throw new RuntimeException(e);
-//        }
-        String i = "jdbc:mysql://localhost:3306/app";
-        return i;
-//        return System.getProperty("test.db.url");
     }
 }

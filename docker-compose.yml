@@ -16,7 +16,18 @@ services:
       - MYSQL_USER=app
       - MYSQL_PASSWORD=pass
       - MYSQL_RANDOM_ROOT_PASSWORD=yes
-#
+
+  postgresql:
+    image: postgres:latest
+    volumes:
+      - ./pgdata:/var/lib/postgresql/pgdata
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=pass
+      - POSTGRES_USER=app
+      - POSTGRES_DB=app
+
 #networks:
 #  default:
 #    external:
