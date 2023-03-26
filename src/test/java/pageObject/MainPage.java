@@ -47,10 +47,10 @@ public class MainPage {
     }
 
     public void successCheck() {
-        successNotification.should(Condition.appear, Duration.ofMillis(15000));
+        successNotification.should(Condition.visible, Duration.ofMillis(15000));
     }
 
-    public void failCheck() {failNotification.should(Condition.appear, Duration.ofMillis(15000));}
+    public void failCheck() {failNotification.should(Condition.visible, Duration.ofMillis(15000));}
 
     public MainPageErrors link(){
         return new MainPageErrors();
