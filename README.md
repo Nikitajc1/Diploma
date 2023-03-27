@@ -1,7 +1,8 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/ig6nixe8a2xkf7sf/branch/main?svg=true)](https://ci.appveyor.com/project/Nikitajc1/diploma/branch/main)
 # Основные артефакты:
-1. 
-
+1. [План тестирования](https://github.com/Nikitajc1/Diploma/blob/main/docs/Plan.md)
+2. [Документ по итогам тестирования](https://github.com/Nikitajc1/Diploma/blob/main/docs/Report.md)
+3. [Документ по итогам автоматизации](https://github.com/Nikitajc1/Diploma/blob/main/docs/Summary.md)
 
 # Инструкция по запуску
 1. Выполнить `pull` данного репозитория
