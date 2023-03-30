@@ -1,1 +1,0 @@
-{"uuid":"073cc2c0-5406-45b1-9b88-e18c9a72f247","name":"checkErrorEmptyPinField()","children":["8613c93e-4466-43fd-81c1-1e367735130d"],"befores":[{"name":"openChrome","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1679747413792,"stop":1679747413824}],"afters":[],"start":1679747413789,"stop":1679747414743}
