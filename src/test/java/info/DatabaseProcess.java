@@ -1,46 +1,49 @@
 package info;
 
 
+import lombok.SneakyThrows;
 import lombok.experimental.UtilityClass;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.ScalarHandler;
+
 import java.sql.*;
 
 @UtilityClass
-public class DatabaseProcess{
+public class DatabaseProcess {
 
     private static Object StatusBuySQL;
     private static Object StatusCreditSQL;
-    private static String statusBuy = "select status from payment_entity group by id order by max(created) desc limit 1";
-    private static String statusCredit = "select status from credit_request_entity group by id order by max(created) desc limit 1";
-    private static String user = "app";
-    private static String pass = "pass";
+    private static String statusBuy = "select status from payment_entity";
+    private static String statusCredit = "select status from credit_request_entity";
     private static QueryRunner runner = new QueryRunner();
+    private static Object AmountBuySQL;
+    private static String amountField = "select amount from payment_entity";
 
     private static Connection getConn() throws SQLException {
-        String prop = System.getProperty("db.url");
-        return DriverManager.getConnection(prop, user, pass);
+        String url = System.getProperty("db.url");
+        String user = System.getProperty("db.user");
+        String pass = System.getProperty("db.pass");
+        return DriverManager.getConnection(url, user, pass);
     }
 
+    @SneakyThrows
     public static String buyingStatus() {
-
-        try {
-            var conn = getConn();
-            StatusBuySQL = runner.query(conn, statusBuy, new ScalarHandler<>());
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+        var conn = getConn();
+        StatusBuySQL = runner.query(conn, statusBuy, new ScalarHandler<>());
         return (String) StatusBuySQL;
     }
 
-    public static String creditStatus() {
+    @SneakyThrows
+    public static int buyingAmount() {
+        var conn = getConn();
+        AmountBuySQL = runner.query(conn, amountField, new ScalarHandler<>());
+        return (int) AmountBuySQL;
+    }
 
-        try {
-            var conn = getConn();
-            StatusCreditSQL = runner.query(conn, statusCredit, new ScalarHandler<>());
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+    @SneakyThrows
+    public static String creditStatus() {
+        var conn = getConn();
+        StatusCreditSQL = runner.query(conn, statusCredit, new ScalarHandler<>());
         return (String) StatusCreditSQL;
     }
 

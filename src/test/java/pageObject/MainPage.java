@@ -1,6 +1,5 @@
 package pageObject;
 
-import info.DataHelper;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
@@ -10,8 +9,8 @@ import static com.codeborne.selenide.Selenide.*;
 public class MainPage {
     private SelenideElement headline = $x("//h2");
     private SelenideElement picture = $x("//img");
-    private SelenideElement buying = $x("//button/span/*[text()='Купить']");
-    private SelenideElement credit = $x("//button/span/*[contains(text(), 'кредит')]");
+    private SelenideElement buyingButton = $x("//button/span/*[text()='Купить']");
+    private SelenideElement creditButton = $x("//button/span/*[contains(text(), 'кредит')]");
     private ElementsCollection informationFieldInput = $$("form span input");
     private SelenideElement successNotification = $x("//div/div[contains(@class, 'notification__title')] [text()='Успешно']");
     private SelenideElement failNotification = $x("//div/div[contains(@class, 'notification__title')] [text()='Ошибка']");
@@ -26,11 +25,11 @@ public class MainPage {
     }
 
     public void buyingProcess() {
-        buying.click();
+        buyingButton.click();
     }
 
     public void creditProcess() {
-        credit.click();
+        creditButton.click();
     }
 
     public void fieldInfo(String card, String month, String year, String holder, String pin) {
@@ -50,9 +49,13 @@ public class MainPage {
         successNotification.should(Condition.visible, Duration.ofMillis(15000));
     }
 
+    public SelenideElement getSuccessNotification() {
+        return successNotification;
+    }
+
     public void failCheck() {failNotification.should(Condition.visible, Duration.ofMillis(15000));}
 
-    public MainPageErrors link(){
+    public MainPageErrors linkToMainPageErrors(){
         return new MainPageErrors();
     }
 

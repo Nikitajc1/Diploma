@@ -14,15 +14,15 @@ public class DataHelper {
         String number;
     }
 
-    public static CardNumber approved() {
+    public static CardNumber getApprovedCard() {
         return new CardNumber("4444 4444 4444 4441");
     }
 
-    public static CardNumber declined() {
+    public static CardNumber getDeclinedCard() {
         return new CardNumber("4444 4444 4444 4442");
     }
 
-    public static CardNumber random() {
+    public static CardNumber getRandomCard() {
         return new CardNumber("1234 5678 9101 1121");
     }
 
